@@ -27,8 +27,8 @@ By default the following keyboard shortcuts are assigned:
 	* `sorter` will attempt to sort any `=`, `,` or ` ` separated values
 	* `sorter` will attempt to restore semicolons
 	* For example:
-	* Input: `a, x, c, 2;`
-	* Output: `2, a, c, x;`
+		* Input: `a, x, c, 2;`
+		* Output: `2, a, c, x;`
 * Multi-Line-Selections
 	* these will be sorted by line
 * Multiple Selections
