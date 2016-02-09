@@ -10,7 +10,7 @@
 	"activationCommands": {
 		"atom-workspace": "sorter:sort"
 	},
-	"repository": "https://github.com/atom/sorter",
+	"repository": "https://github.com/dodekeract/atom-sorter",
 	"license": "MIT",
 	"engines": {
 		"atom": ">=1.0.0 <2.0.0"
