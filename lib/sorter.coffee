@@ -1,5 +1,5 @@
 SorterView = require './sorter-view'
-RangeFinder = require './modules/srot-lines/lib/range-finder'
+RangeFinder = require './ranges.coffee'
 {CompositeDisposable} = require 'atom'
 # natural = require 'natural-sort'
 
@@ -53,24 +53,46 @@ module.exports = Sorter =
 				else
 					end = ''
 
-				# comma separated
-				if text.indexOf(',') != -1
-					splitString = ','
-					joinString = ', '
+				# map
+				separations = [
+					{
+						find: '='
+						join: ' = '
+						split: '='
+					}
+					{
+						find: ','
+						join: ', '
+						split: ','
+					}
+					{
+						find: ':'
+						join: ': '
+						split: ':'
+					}
+					{
+						find: ' '
+						join: ' '
+						split: ' '
+					}
+				]
 
-				# space separated
-				else if text.indexOf(' ') != -1
-					splitString = joinString = ' '
+				# find separation
+				separationIndex = -1
+				for separation, index in separations
+					if text.indexOf(separation.find) != -1
+						separationIndex = index
+						break
 
-				# skip other formats
-				else return
+				# skip unknown separations
+				return if separationIndex == -1
 
 				# trim whitespace from each element
-				things = text.split(splitString).map (x) ->
+				things = text.split(separations[separationIndex].split).map (x) ->
 					x.trim()
 
 				# sort & merge the elements
-				sorted = things.sort().join(joinString)
+				sorted = things.sort().join(separations[separationIndex].join)
 
 				# insert the sorted elements
 				editor.setTextInBufferRange(range, indentation + sorted + end)
@@ -78,45 +100,3 @@ module.exports = Sorter =
 			else
 				textLines.sort()
 				editor.setTextInBufferRange(range, textLines.join("\n"))
-		#
-		# selections = editor.getSelections()
-		#
-		# for selection in selections
-		# 	do (selection) ->
-		# 	text = @replaceEOL(selection.getText())
-		#
-		# 	if @countLines(text) == 1
-		# 		# gather information & remove whitespace
-		# 		indentation = @removeIndentation(text)
-		# 		text = text.trim()
-		#
-		# 		# determine end of sorted string
-		# 		if text.endsWith ';'
-		# 			end = ';\n'
-		# 			text = text.slice(0, -1)
-		# 		else
-		# 			end = '\n'
-		#
-		# 		# handle ',' and ' ' separated strings
-		# 		if text.indexOf(',') != -1
-		# 			splitString = ','
-		# 			joinString = ', '
-		#
-		# 		else if text.indexOf(' ') != -1
-		# 			splitString = joinString = ' '
-		#
-		# 		else continue
-		#
-		# 		# trim whitespace from each element
-		# 		things = text.split(splitString).map (x) ->
-		# 			x.trim()
-		#
-		# 		# sort & merge the elements
-		# 		sorted = things.sort().join(joinString)
-		#
-		# 		# insert the sorted elements
-		# 		selection.insertText(indentation + sorted + end)
-		#
-		# 	else
-		# 		lines = @splitLines(text).sort()
-		# 		selection.insertText(lines.join('\n') + '\n', {select: true})
