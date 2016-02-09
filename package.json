@@ -25,7 +25,9 @@
 		"plugins": {
 			"lint": {
 				"no-tabs": false,
-				"no-html": false
+				"no-html": false,
+				"list-item-indent": "space",
+				"maximum-line-length": 85
 			}
 		}
 	}
