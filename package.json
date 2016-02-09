@@ -1,6 +1,6 @@
 {
 	"name": "sorter",
-	"main": "./lib",
+	"main": "./lib/sorter.coffee",
 	"version": "0.0.1",
 	"description": "Sort all the things!",
 	"keywords": [
@@ -8,11 +8,14 @@
 		"lines"
 	],
 	"activationCommands": {
-		"atom-workspace": "sorter:toggle"
+		"atom-workspace": "sorter:sort"
 	},
 	"repository": "https://github.com/atom/sorter",
 	"license": "MIT",
 	"engines": {
 		"atom": ">=1.0.0 <2.0.0"
+	},
+	"dependencies": {
+		"natural-sort": "0.1.x"
 	}
 }
