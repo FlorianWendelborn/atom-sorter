@@ -8,7 +8,10 @@
 		"lines"
 	],
 	"activationCommands": {
-		"atom-workspace": "sorter:sort"
+		"atom-workspace": [
+			"sorter:sort",
+			"sorter:natural-sort"
+		]
 	},
 	"repository": "https://github.com/dodekeract/atom-sorter",
 	"license": "MIT",
@@ -16,6 +19,14 @@
 		"atom": ">=1.0.0 <2.0.0"
 	},
 	"dependencies": {
-		"natural-sort": "0.1.x"
+		"javascript-natural-sort": "0.7.x"
+	},
+	"remarkConfig": {
+		"plugins": {
+			"lint": {
+				"no-tabs": false,
+				"no-html": false
+			}
+		}
 	}
 }

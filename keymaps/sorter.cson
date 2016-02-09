@@ -1,2 +1,3 @@
 'atom-workspace':
 	'ctrl-alt-e': 'sorter:sort'
+	'alt-shift-e': 'sorter:natural-sort'

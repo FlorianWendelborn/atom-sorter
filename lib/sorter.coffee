@@ -1,7 +1,6 @@
-SorterView = require './sorter-view'
 RangeFinder = require './ranges.coffee'
 {CompositeDisposable} = require 'atom'
-# natural = require 'natural-sort'
+natural = require 'javascript-natural-sort'
 
 module.exports = Sorter =
 	subscriptions: null
@@ -12,6 +11,7 @@ module.exports = Sorter =
 
 		# Register command that toggles this view
 		@subscriptions.add atom.commands.add 'atom-workspace', 'sorter:sort': => @sort()
+		@subscriptions.add atom.commands.add 'atom-workspace', 'sorter:natural-sort': => @sort(natural)
 
 	deactivate: ->
 		@subscriptions.dispose()
@@ -34,7 +34,7 @@ module.exports = Sorter =
 			if character != ' ' and character != '\t'
 				return text.substring(0, index)
 
-	sort: ->
+	sort: (sortingFunction) ->
 		editor = atom.workspace.getActiveTextEditor()
 		return unless editor
 
@@ -92,11 +92,13 @@ module.exports = Sorter =
 					x.trim()
 
 				# sort & merge the elements
-				sorted = things.sort().join(separations[separationIndex].join)
+				sorted = things.sort() unless sortingFunction
+				sorted = things.sort(sortingFunction) if sortingFunction
 
 				# insert the sorted elements
-				editor.setTextInBufferRange(range, indentation + sorted + end)
+				editor.setTextInBufferRange(range, indentation + sorted.join(separations[separationIndex].join) + end)
 
 			else
-				textLines.sort()
+				textLines.sort() unless sortingFunction
+				textLines.sort(sortingFunction) if sortingFunction
 				editor.setTextInBufferRange(range, textLines.join("\n"))

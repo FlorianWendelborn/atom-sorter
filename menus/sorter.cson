@@ -1,22 +1,26 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Sort'
-      'command': 'sorter:sort'
-    }
-  ]
+	'atom-text-editor': [
+		{
+			'label': 'Sort'
+			'command': 'sorter:sort'
+		}
+	]
 'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'Sorter'
-      'submenu': [
-        {
-          'label': 'Sort'
-          'command': 'sorter:sort'
-        }
-      ]
-    ]
-  }
+	{
+		'label': 'Packages'
+		'submenu': [
+			'label': 'Sorter'
+			'submenu': [
+				{
+					'label': 'Sort'
+					'command': 'sorter:sort'
+				}
+				{
+					'label': 'Natural Sort'
+					'command': 'sorter:natural-sort'
+				}
+			]
+		]
+	}
 ]

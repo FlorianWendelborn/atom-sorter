@@ -13,3 +13,12 @@ Since this project uses git submodules, cloning is a little bit different.
 	cd atom-sorter
 	git submodule update --init
 ````
+
+## Bindings
+
+By default the following keyboard shortcuts are assigned:
+
+|                         Keyboard Shortcut | API Call            |
+|------------------------------------------:|:--------------------|
+| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:sort         |
+| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:natural-sort |
