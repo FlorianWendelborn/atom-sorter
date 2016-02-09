@@ -2,18 +2,6 @@
 
 It attempts to sort all the things.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
-
-## Cloning
-
-Since this project uses git submodules, cloning is a little bit different.
-
-````bash
-	git clone https://github.com/dodekeract/atom-sorter
-	cd atom-sorter
-	git submodule update --init
-````
-
 ## Bindings
 
 By default the following keyboard shortcuts are assigned:
@@ -22,3 +10,26 @@ By default the following keyboard shortcuts are assigned:
 |------------------------------------------:|:--------------------|
 | <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:sort         |
 | <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:natural-sort |
+
+## Supported Sorting Algorithms
+
+	* Alphabetic Sort
+		* default javascript sorting function
+		* `sorter:sort`
+	* Natural Sort
+		* attempts to sort like a human would
+		* uses [javascript-natural-sort](https://npmjs.org/package/javascript-natural-sort)
+		* `sorter:natural-sort`
+
+## Supported Sorting Contexts
+
+	* Single-Line-Selections and selections spanning parts of one line
+		* `sorter` will attempt to sort any `=`, `,` or ` ` separated values
+		* `sorter` will attempt to restore semicolons
+		* For example:
+			* Input: `a, x, c, 2;`
+			* Output: `2, a, c, x;`
+	* Multi-Line-Selections
+		* these will be sorted by line
+	* Multiple Selections
+		* every selection will be handled separately according to the rules above
