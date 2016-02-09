@@ -1,34 +1,34 @@
 {
-	"name": "sorter",
-	"main": "./lib/sorter.coffee",
-	"version": "0.1.1",
-	"description": "Sort all the things!",
-	"keywords": [
-		"sort",
-		"lines"
-	],
-	"activationCommands": {
-		"atom-workspace": [
-			"sorter:sort",
-			"sorter:natural-sort"
-		]
-	},
-	"repository": "https://github.com/dodekeract/atom-sorter",
-	"license": "MIT",
-	"engines": {
-		"atom": ">=1.0.0 <2.0.0"
-	},
-	"dependencies": {
-		"javascript-natural-sort": "0.7.x"
-	},
-	"remarkConfig": {
-		"plugins": {
-			"lint": {
-				"no-tabs": false,
-				"no-html": false,
-				"list-item-indent": "space",
-				"maximum-line-length": 85
-			}
-		}
-	}
+  "name": "sorter",
+  "main": "./lib/sorter.coffee",
+  "version": "0.1.2",
+  "description": "Sort all the things!",
+  "keywords": [
+    "sort",
+    "lines"
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "sorter:sort",
+      "sorter:natural-sort"
+    ]
+  },
+  "repository": "https://github.com/dodekeract/atom-sorter",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "javascript-natural-sort": "0.7.x"
+  },
+  "remarkConfig": {
+    "plugins": {
+      "lint": {
+        "no-tabs": false,
+        "no-html": false,
+        "list-item-indent": "space",
+        "maximum-line-length": 85
+      }
+    }
+  }
 }
