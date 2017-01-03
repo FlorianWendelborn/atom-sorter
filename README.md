@@ -6,10 +6,10 @@ It attempts to sort all the things.
 
 By default the following keyboard shortcuts are assigned:
 
-|                         Keyboard Shortcut | API Call            |
-|------------------------------------------:|:--------------------|
-| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:sort         |
-| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:natural-sort |
+|                          Keyboard Shortcut | API Call            |
+|-------------------------------------------:|:--------------------|
+| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd>  | sorter:sort         |
+| <kbd>Alt</kbd><kbd>Shift</kbd><kbd>E</kbd> | sorter:natural-sort |
 
 ## Supported Sorting Algorithms
 
