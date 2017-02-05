@@ -52,13 +52,14 @@ module.exports = Sorter =
 					text = text.slice(0, -1)
 				else
 					end = ''
+					style="top: 1px; bottom: 2px;" a="test"
 
 				# map
 				separations = [
 					{
 						find: '="'
-						join: ' '
-						split: ' '
+						join: '" '
+						split: '" '
 					}
 					{
 						find: ';'
