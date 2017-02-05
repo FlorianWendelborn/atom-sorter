@@ -56,14 +56,14 @@ module.exports = Sorter =
 				# map
 				separations = [
 					{
-						find: ';'
-						join: '; '
-						split: ';'
-					}
-					{
 						find: '="'
 						join: ' '
 						split: ' '
+					}
+					{
+						find: ';'
+						join: '; '
+						split: ';'
 					}
 					{
 						find: '='
