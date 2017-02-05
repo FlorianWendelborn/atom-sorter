@@ -1,7 +1,7 @@
 {
   "name": "sorter",
   "main": "./lib/sorter.coffee",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Sort all the things!",
   "keywords": [
     "sort",
