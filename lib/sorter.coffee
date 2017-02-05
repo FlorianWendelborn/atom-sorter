@@ -58,32 +58,38 @@ module.exports = Sorter =
 					{
 						find: '="'
 						join: '" '
-						split: '" '
+						split: /" |"$/gm
+						end: '"'
 					}
 					{
 						find: ';'
 						join: '; '
 						split: ';'
+						end: ''
 					}
 					{
 						find: '='
 						join: ' = '
 						split: '='
+						end: ''
 					}
 					{
 						find: ','
 						join: ', '
 						split: ','
+						end: ''
 					}
 					{
 						find: ':'
 						join: ': '
 						split: ':'
+						end: ''
 					}
 					{
 						find: ' '
 						join: ' '
 						split: ' '
+						end: ''
 					}
 				]
 
@@ -97,9 +103,13 @@ module.exports = Sorter =
 				# skip unknown separations
 				return if separationIndex == -1
 
+				# add end
+				end += separations[separationIndex].end
+
 				# trim whitespace from each element
-				things = text.split(separations[separationIndex].split).map (x) ->
-					x.trim()
+				things = text
+					.split(separations[separationIndex].split)
+					.filter((x) -> !!x).map((x) -> x.trim())
 
 				# sort & merge the elements
 				sorted = things.sort() unless sortingFunction
