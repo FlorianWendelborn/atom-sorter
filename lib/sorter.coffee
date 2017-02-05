@@ -61,6 +61,11 @@ module.exports = Sorter =
 						split: ';'
 					}
 					{
+						find: '="'
+						join: ' '
+						split: ' '
+					}
+					{
 						find: '='
 						join: ' = '
 						split: '='
