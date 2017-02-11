@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.0 - JSON!
+* implement JSON sorting, no matter if it's inlined or in a separate file, auto-detects indentation type
+* rewrote in ES6, good bye CoffeScript, you've served us well
+
 ## 0.1.2 - README updated
 
 * updated README

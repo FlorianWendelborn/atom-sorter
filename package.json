@@ -1,34 +1,36 @@
 {
-  "name": "sorter",
-  "main": "./lib/sorter.coffee",
-  "version": "0.1.8",
-  "description": "Sort all the things!",
-  "keywords": [
-    "sort",
-    "lines"
-  ],
   "activationCommands": {
     "atom-workspace": [
       "sorter:sort",
       "sorter:natural-sort"
     ]
   },
-  "repository": "https://github.com/dodekeract/atom-sorter",
-  "license": "MIT",
+  "dependencies": {
+    "compute-gcd": "^1.2.0",
+    "javascript-natural-sort": "0.7.x",
+    "json-stable-stringify": "^1.0.1"
+  },
+  "description": "Sort all the things!",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-    "javascript-natural-sort": "0.7.x"
-  },
+  "keywords": [
+    "sort",
+    "lines"
+  ],
+  "license": "MIT",
+  "main": "./lib/sorter.js",
+  "name": "sorter",
   "remarkConfig": {
     "plugins": {
       "lint": {
-        "no-tabs": false,
-        "no-html": false,
         "list-item-indent": "space",
-        "maximum-line-length": 85
+        "maximum-line-length": 85,
+        "no-html": false,
+        "no-tabs": false
       }
     }
-  }
+  },
+  "repository": "https://github.com/dodekeract/atom-sorter",
+  "version": "0.1.8"
 }
