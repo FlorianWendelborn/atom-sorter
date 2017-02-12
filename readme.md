@@ -1,6 +1,15 @@
-# sorter package for atom
+# Sorter
 
-It attempts to sort all the things.
+[![Package Installs](https://img.shields.io/apm/dm/sorter.svg?style=flat-square)](https://atom.io/packages/sorter)
+[![Package Version](https://img.shields.io/apm/v/sorter.svg?style=flat-square)](https://atom.io/packages/sorter)
+
+> Sort all the things!
+
+## Installation
+
+```bash
+apm install sorter
+```
 
 ## Bindings
 
@@ -8,7 +17,7 @@ By default the following keyboard shortcuts are assigned:
 
 |                          Keyboard Shortcut | API Call            |
 |-------------------------------------------:|:--------------------|
-| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd>  | sorter:sort         |
+|  <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd> | sorter:sort         |
 | <kbd>Alt</kbd><kbd>Shift</kbd><kbd>E</kbd> | sorter:natural-sort |
 
 ## Supported Sorting Algorithms
@@ -20,7 +29,7 @@ By default the following keyboard shortcuts are assigned:
 
 * Natural Sort
 
-	* attempts to sort like a human would
+	* sorts like a human
 	* uses [javascript-natural-sort](https://npmjs.org/package/javascript-natural-sort)
 	* `sorter:natural-sort`
 
@@ -28,14 +37,19 @@ By default the following keyboard shortcuts are assigned:
 
 * Single-Line-Selections and selections spanning parts of one line
 
+	* `sorter` will attempt to sort JSON
+	* `sorter` will attempt to sort HTML
+	* `sorter` will attempt to sort CSS
 	* `sorter` will attempt to sort any `=`, `,` or ` ` separated values
-	* `sorter` will attempt to restore semicolons
+	* `sorter` will attempt to restore semicolons and indentation
 	* For example:
-		* Input: `a, x, c, 2;`
-		* Output: `2, a, c, x;`
+		* `{"b":0,"a":1}` → `{"a":1,"b":0}`
+		* `id="a" class="example"` → `class="example" id="a"`
+		* `a, x, c, 2;` → `2, a, c, x;`
 
 * Multi-Line-Selections
 
+	* `sorter` will attempt to sort JSON
 	* these will be sorted by line
 
 * Multiple Selections

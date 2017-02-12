@@ -16,21 +16,17 @@
   },
   "keywords": [
     "sort",
-    "lines"
+    "lines",
+    "sorting",
+    "natural",
+    "natural-sort",
+    "json-sorting",
+    "sort-json",
+    "json"
   ],
   "license": "MIT",
-  "main": "./lib/sorter.js",
+  "main": "./source/index.js",
   "name": "sorter",
-  "remarkConfig": {
-    "plugins": {
-      "lint": {
-        "list-item-indent": "space",
-        "maximum-line-length": 85,
-        "no-html": false,
-        "no-tabs": false
-      }
-    }
-  },
   "repository": "https://github.com/dodekeract/atom-sorter",
   "version": "1.0.0"
 }
