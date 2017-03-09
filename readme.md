@@ -1,5 +1,6 @@
 # Sorter
 
+[![Slack](https://slack.dodekeract.com/badge.svg)](https://slack.dodekeract.com)
 [![Package Installs](https://img.shields.io/apm/dm/sorter.svg?style=flat-square)](https://atom.io/packages/sorter)
 [![Package Version](https://img.shields.io/apm/v/sorter.svg?style=flat-square)](https://atom.io/packages/sorter)
 
