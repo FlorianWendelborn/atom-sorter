@@ -22,26 +22,16 @@ By default the following keyboard shortcuts are assigned:
 
 | Keyboard Shortcut | API Call              |
 |------------------:|:----------------------|
-|             `⌃⌥E` | `sorter:sort`         |
+|             `⌃⌥E` | `sorter:sort`         |
 |             `⌥⇧E` | `sorter:natural-sort` |
-
-## Supported Sorting Algorithms
-
-* Alphabetic Sort
-	* default javascript sorting function
-	* `sorter:sort`
-
-* Natural Sort
-	* sorts like a human
-	* uses [javascript-natural-sort](https://npmjs.org/package/javascript-natural-sort)
-	* `sorter:natural-sort`
 
 ## Supported Sorting Contexts
 
 * Single-Line-Selections and selections spanning parts of one line
-	* `sorter` will attempt to sort JSON
-	* `sorter` will attempt to sort HTML
-	* `sorter` will attempt to sort CSS
+	* `sorter` will attempt to sort `JSON`
+	* `sorter` will attempt to sort `YAML`
+	* `sorter` will attempt to sort `HTML`
+	* `sorter` will attempt to sort `CSS`
 	* `sorter` will attempt to sort any `=`, `,` or ` ` separated values
 	* `sorter` will attempt to restore semicolons and indentation
 	* For example:
@@ -55,3 +45,15 @@ By default the following keyboard shortcuts are assigned:
 
 * Multiple Selections
 	* every selection will be handled separately according to the rules above
+
+
+## Supported Sorting Algorithms
+
+* Alphabetic Sort
+	* default javascript sorting function
+	* `sorter:sort`
+
+* Natural Sort
+	* sorts like a human
+	* uses [javascript-natural-sort](https://npmjs.org/package/javascript-natural-sort)
+	* `sorter:natural-sort`
