@@ -1,32 +1,33 @@
 {
-  "activationCommands": {
-    "atom-workspace": [
-      "sorter:sort",
-      "sorter:natural-sort"
-    ]
-  },
-  "dependencies": {
-    "compute-gcd": "^1.2.0",
-    "javascript-natural-sort": "0.7.x",
-    "json-stable-stringify": "^1.0.1"
-  },
-  "description": "Sort all the things!",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "keywords": [
-    "sort",
-    "lines",
-    "sorting",
-    "natural",
-    "natural-sort",
-    "json-sorting",
-    "sort-json",
-    "json"
-  ],
-  "license": "MIT",
-  "main": "./source/index.js",
-  "name": "sorter",
-  "repository": "https://github.com/dodekeract/atom-sorter",
-  "version": "1.1.0"
+	"activationCommands": {
+		"atom-workspace": [
+			"sorter:sort",
+			"sorter:natural-sort"
+		]
+	},
+	"dependencies": {
+		"compute-gcd": "^1.2.0",
+		"javascript-natural-sort": "0.7.x",
+		"js-yaml": "^3.12.0",
+		"json-stable-stringify": "^1.0.1"
+	},
+	"description": "Sort all the things!",
+	"engines": {
+		"atom": ">=1.0.0 <2.0.0"
+	},
+	"keywords": [
+		"sort",
+		"lines",
+		"sorting",
+		"natural",
+		"natural-sort",
+		"json-sorting",
+		"sort-json",
+		"json"
+	],
+	"license": "MIT",
+	"main": "./source/index.js",
+	"name": "sorter",
+	"repository": "https://github.com/dodekeract/atom-sorter",
+	"version": "1.2.0"
 }
