@@ -18,12 +18,12 @@ apm install sorter
 
 ## Bindings
 
-By default the following keyboard shortcuts are assigned:
+By default, the following keyboard shortcuts are assigned:
 
-| Keyboard Shortcut                           | API Call              |
-|--------------------------------------------:|:----------------------|
-| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>E</kbd> | `sorter:sort`         |
-| <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>E</kbd>   | `sorter:natural-sort` |
+| macOS |       API Call        | Linux                                       |
+|------:|:---------------------:|:--------------------------------------------|
+| `⌃⌥E` |     `sorter:sort`     | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>E</kbd> |
+| `⌥⇧E` | `sorter:natural-sort` | <kbd>ALT</kbd>+<kbd>⇧</kbd>+<kbd>E</kbd>    |
 
 ## Supported Sorting Contexts
 
