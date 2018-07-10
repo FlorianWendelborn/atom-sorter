@@ -1,6 +1,11 @@
 # Changelog
 
-## 1.1.0 — YAML!
+## 1.2.1 — Fixed YAML
+
+* YAML will only be sorted when opening a YAML file ([issue #5](https://github.com/dodekeract/atom-sorter/issues/5), [pull request #7](https://github.com/dodekeract/atom-sorter/pull/7))
+
+## 1.2.0 — YAML!
+
 * implement YAML sorting, no matter if it’s inlined or in a separate file, auto-detects indentation type
 
 ## 1.0.1 — Natural JSON
