@@ -1,3 +1,0 @@
-[submodule "modules/sort-lines"]
-	path = modules/sort-lines
-	url = git@github.com:atom/sort-lines
