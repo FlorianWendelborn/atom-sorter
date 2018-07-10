@@ -20,10 +20,10 @@ apm install sorter
 
 By default the following keyboard shortcuts are assigned:
 
-| Keyboard Shortcut | API Call              |
-|------------------:|:----------------------|
-|             `⌃⌥E` | `sorter:sort`         |
-|             `⌥⇧E` | `sorter:natural-sort` |
+| Keyboard Shortcut                           | API Call              |
+|--------------------------------------------:|:----------------------|
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>E</kbd> | `sorter:sort`         |
+| <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>E</kbd>   | `sorter:natural-sort` |
 
 ## Supported Sorting Contexts
 
