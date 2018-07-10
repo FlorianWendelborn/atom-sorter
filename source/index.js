@@ -37,9 +37,9 @@ const sort = sortingFunction => {
 				try {
 					return sortJSON(lines, sortingFunction)
 				} catch (error) {
-					try {
+					if (editor.getGrammar().name === "YAML") {
 						return sortYAML(lines, sortingFunction)
-					} catch (error) {
+					} else {
 						return lines.length === 1
 							? sortLine(lines[0], sortingFunction)
 							: sortLines(lines, sortingFunction)
