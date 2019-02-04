@@ -8,17 +8,37 @@ const sortLine = require('./sort/line')
 const sortLines = require('./sort/lines')
 const sortYAML = require('./sort/yaml')
 
+// region config
+
+const config = {
+	caseSensitive: {
+		default: true,
+		description: "When sorting naturally, `['a', 'B']` yields `['B', 'a']` rather than `['a', 'B']`.",
+		title: 'Case Sensitive Natural Sort',
+		type: 'boolean',
+	}
+}
+
+// endregion
+
 // region subscriptions
 
 const subscriptions = new CompositeDisposable()
 
-const activate = () =>
+const activate = () => {
+	natural.insensitive = !atom.config.get('sorter.caseSensitive')
+
+	subscriptions.add(
+		atom.config.onDidChange('sorter.caseSensitive', ({ newValue }) => natural.insensitive = !newValue)
+	)
+
 	subscriptions.add(
 		atom.commands.add('atom-workspace', {
 			'sorter:sort': () => sort(),
 			'sorter:natural-sort': () => sort(natural),
 		})
 	)
+}
 
 const deactivate = () => subscriptions.dispose()
 
@@ -52,4 +72,4 @@ const sort = sortingFunction => {
 
 // endregion
 
-module.exports = { activate, deactivate }
+module.exports = { activate, config, deactivate }
