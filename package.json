@@ -8,7 +8,7 @@
 	"dependencies": {
 		"compute-gcd": "^1.2.0",
 		"javascript-natural-sort": "0.7.x",
-		"js-yaml": "^3.12.0",
+		"js-yaml": "^3.13.1",
 		"json-stable-stringify": "^1.0.1"
 	},
 	"description": "Sort all the things!",
